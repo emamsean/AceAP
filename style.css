@@ -1,0 +1,107 @@
+html, body {
+  height: 100%;
+  overflow-y: auto;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a2e;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #0f3460;
+  padding: 20px;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #16213e;
+  flex-wrap: wrap;
+}
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #16213e;
+  color: white;
+  border: none;
+  margin: 5px;
+  border-radius: 8px;
+}
+.tab:hover {
+  background-color: #0f3460;
+}
+.tab.active {
+  background-color: #e94560;
+}
+.content {
+  text-align: center;
+  padding: 20px;
+}
+.option {
+  background-color: #16213e;
+  padding: 10px 20px;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+.option:hover {
+  background-color: #0f3460;
+  transform: scale(1.05);
+}
+#result {
+  font-size: 22px;
+  margin-top: 20px;
+}
+#scoreboard {
+  margin-top: 40px;
+  background-color: #0f3460;
+  padding: 15px;
+  border-radius: 10px;
+}
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #fff;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #e94560;
+}
+#userForm {
+  text-align: center;
+  margin: 20px;
+}
+#userForm input {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+}
+details {
+  background-color: #16213e;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px auto;
+  max-width: 600px;
+}
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #16213e;
+}
+::-webkit-scrollbar-thumb {
+  background: #e94560;
+  border-radius: 10px;
+}

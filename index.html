@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AP Exam Prep Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0f3460" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>AP Exam Prep Game</h1>
+  </header>
+  <div id="userForm">
+    <input type="text" id="userName" placeholder="Enter your name" required />
+    <input type="text" id="userSchool" placeholder="High school" required />
+    <input type="text" id="userCountry" placeholder="Country" required />
+    <button id="startBtn">Start</button>
+  </div>
+  <div class="content">
+    <div id="checklistContainer"></div>
+  </div>
+  <nav id="tabs"></nav>
+  <div class="content">
+    <div id="definition">Select a subject to begin.</div>
+    <div id="question"></div>
+    <div id="options"></div>
+    <div id="result"></div>
+    <div id="scoreSummary"></div>
+  </div>
+  <div id="scoreboard">
+    <h2>Leaderboard (click to share on Instagram)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>High School</th>
+          <th>Country</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody">
+        <tr><td>Ali</td><td>Lincoln High</td><td>USA</td><td>90</td></tr>
+        <tr><td>Sara</td><td>Maplewood Academy</td><td>Canada</td><td>80</td></tr>
+        <tr><td>Juan</td><td>Instituto Moderno</td><td>Mexico</td><td>70</td></tr>
+      </tbody>
+    </table>
+    <button id="shareInstagram">📸 Share on Instagram</button>
+    <canvas id="leaderboardCanvas" style="display:none;"></canvas>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
